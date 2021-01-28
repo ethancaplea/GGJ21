@@ -57,9 +57,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\TileGeneration.cs" />
     <Compile Include="Assets\Camera.cs" />
+    <Compile Include="Assets\Scripts\BasicEnemyBehavior.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnBehavior.cs" />
     <Compile Include="Assets\Player.cs" />
-    <Compile Include="Assets\Scripts\BasicEnemyBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

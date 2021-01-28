@@ -21,14 +21,14 @@ public class EnemySpawnBehavior : MonoBehaviour
         while (enemyCount < enemyCountMax)
         {
             // where enemies can spawn
-            xPos = Random.Range(1, 50);
-            zPos = Random.Range(1, 50);
+            xPos = Random.Range(200, 501);
+            zPos = Random.Range(200, 401);
 
             // instantiate enemies
-            Instantiate(enemy, new Vector3(xPos, 2, zPos), Quaternion.identity);
+            Instantiate(enemy, new Vector3(xPos, 10, zPos), Quaternion.identity);
 
             // how often to spawn enemies
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(10f);
 
             // increment enemy count
             enemyCount++;

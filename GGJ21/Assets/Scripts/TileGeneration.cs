@@ -7,8 +7,8 @@ public class TileGeneration : MonoBehaviour
     public int mapWidth;       // width of the whole map
     public int mapHeight;      // height of the whole map
     public GameObject[] tiles;  // available tile types
-    int tileWidth = 1000;      // width of each tile
-    int tileHeight = 1000;     // height of each tile
+    int tileWidth = 100;      // width of each tile
+    int tileHeight = 100;     // height of each tile
 
     private void Start()
     {
@@ -29,12 +29,12 @@ public class TileGeneration : MonoBehaviour
         int xCoord = 0;
         int zCoord = 0;
 
-        for (zCoord = 0; zCoord <= ((mapHeight-1)*1000); zCoord += _tileHeight)  // for each z
+        for (zCoord = 0; zCoord <= ((mapHeight-1)*100); zCoord += _tileHeight)  // for each z
         {
-            for (xCoord = 0; xCoord <= ((mapWidth-1)*1000); xCoord+= _tileWidth)   // for each x
+            for (xCoord = 0; xCoord <= ((mapWidth-1)*100); xCoord+= _tileWidth)   // for each x
             {
                 // make a tile at passed in coords
-                Instantiate(tiles[Random.Range(0, 2)], new Vector3(xCoord, 1, zCoord), Quaternion.identity);
+                Instantiate(tiles[Random.Range(0, 2)], new Vector3(xCoord, .1f, zCoord), Quaternion.identity);
             }
             // set xcoord back to zero
             xCoord = 0;
