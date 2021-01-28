@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Nolan.unity
+=======
+- path: Assets/Scenes/Matt.unity
+>>>>>>> af8ec46c61d43b78a7984053a2d804fcc2a6739a
   isLoaded: 1
   isActive: 1
   isSubScene: 0
