@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Nolan.unity
-=======
-- path: Assets/Scenes/Ethan.unity
->>>>>>> d2df9e368b4316959c53e327cbc6e251e5f565b3
   isLoaded: 1
   isActive: 1
   isSubScene: 0
