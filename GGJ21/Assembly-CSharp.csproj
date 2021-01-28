@@ -61,17 +61,13 @@
     <Compile Include="Assets\Scripts\ItemManagement.cs" />
     <Compile Include="Assets\Scripts\BasicEnemyBehavior.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnBehavior.cs" />
-<<<<<<< HEAD
-    <Compile Include="Assets\Player.cs" />
-    <Compile Include="Assets\Scripts\LightingCycle.cs" />
-=======
     <Compile Include="Assets\Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\LightingCycle.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerWeapon.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\Sound.cs" />
->>>>>>> cef5d3b787c966d8d10444166c67af58a8121488
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
