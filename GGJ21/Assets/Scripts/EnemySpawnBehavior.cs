@@ -9,7 +9,7 @@ public class EnemySpawnBehavior : MonoBehaviour
     public int xPos;    // spawn x coordinate
     public int zPos;    // spawn z coordinate
     int enemyCount = 0;  // number of enemies spawned
-    public int enemyCountMax; // number of enemies to spawn
+    public int enemyCountMax = 10; // number of enemies to spawn
 
     void Start()
     {
@@ -28,7 +28,7 @@ public class EnemySpawnBehavior : MonoBehaviour
             Instantiate(enemy, new Vector3(xPos, 2, zPos), Quaternion.identity);
 
             // how often to spawn enemies
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(0.1f);
 
             // increment enemy count
             enemyCount++;
