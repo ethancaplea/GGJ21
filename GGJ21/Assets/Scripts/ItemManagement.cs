@@ -6,14 +6,23 @@ public class ItemManagement : MonoBehaviour
 {
     public List<Item> items = new List<Item>();
 
+
+    public void Start()
+    {
+        Management();
+    }
+    public Item GetItem(int id)
+    {
+        return items.Find(item => item.id == id);
+    }
     void Management()
     {
         items = new List<Item>()
         {
-            new Item(0, "Axe", "Very long", new Dictionary<string, float>
+            new Item(0, "Hands", "Weak", new Dictionary<string, float>
             {
-                {"Range", 3.0f},
-                {"Damage", 2.0f }
+                {"Range", 1.0f},
+                {"Damage", 1.0f }
 
             }, "Weapon"),
             new Item(1, "Sword", "Very strong", new Dictionary<string, float>
@@ -26,5 +35,8 @@ public class ItemManagement : MonoBehaviour
                 {"Speed", 3 }
             }, "Power up")
         };
+
+        
+        
     }
 }
