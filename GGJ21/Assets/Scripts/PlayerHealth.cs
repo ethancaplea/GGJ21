@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public GameObject character;
     public float health;
-    private GameObject weapon;
+    private GameObject weapon;//need to be looking at the monsters damage/weapon
     // Start is called before the first frame update
     void Start()
     {

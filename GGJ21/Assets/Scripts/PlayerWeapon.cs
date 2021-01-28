@@ -5,31 +5,26 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
+    [NonSerialized] public Item weapon;
+    private ItemManagement items;
     public float damage;
     public float range;
-    private float nr;
-   // public float fireRate;
-   // public float knockback;
     private GameObject enemy;
-    [NonSerialized] public PlayerWeapon currentWeapon;
     private bool hit;
     // Start is called before the first frame update
     void Start()
     {
-        currentWeapon = this.GetComponent<PlayerWeapon>();
         hit = this.GetComponent<BoxCollider>().enabled;
         hit = false;
-
-       nr = this.GetComponent<BoxCollider>().size.x;
+        weapon = items.items[0];
     }
 
     // Update is called once per frame
     void Update()
     {
         //set the stats to the current weapon
-        damage = currentWeapon.GetComponent<PlayerWeapon>().damage;
-        range = currentWeapon.GetComponent<PlayerWeapon>().range;
-        nr = range;
+        damage = weapon.stats["Damage"];
+        range = weapon.stats["Range"];
         //if the player presses the left mouse click 
         //swing the weapon
         if (Input.GetButton("Fire1"))
@@ -41,6 +36,9 @@ public class PlayerWeapon : MonoBehaviour
         {
             hit = false;
         }
+
+        //if check so the player can switch between available weapons
+        //if nothing is in that slot it gets defaulted to fists
 
     }
 
