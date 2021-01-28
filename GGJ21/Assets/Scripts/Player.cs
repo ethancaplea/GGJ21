@@ -11,9 +11,10 @@ public class Player : MonoBehaviour
     //stats
     public float health = 50F;
     public float stamina = 5F;
-    public GameObject weapon;
+   // public GameObject weapon;
     private float refillStam;
     private bool tired = false;
+    private bool cooldown = false;
     public float timer;
     private float resetTimer;
     private Vector3 moveDirection = Vector3.zero;
@@ -38,7 +39,8 @@ public class Player : MonoBehaviour
             moveDirection *= speed;
 
             //Player is able to run in short burst - drains stamina
-            if (Input.GetButton("Run") && stamina > 0 && tired == false)
+            
+            if (Input.GetButton("Run") && stamina > 0 && tired == false && cooldown == false)
             {
                 speed = 10F;
                 stamina -= Time.deltaTime;
@@ -56,11 +58,33 @@ public class Player : MonoBehaviour
             else
             {
                 tired = false;
+                timer = resetTimer;
             }
+
+            if(timer <= 1 && tired == true)
+            {
+                StartCoroutine(CoolDown());
+                cooldown = true;
+            }
+            else
+            {
+                cooldown = false;
+            }
+
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
 
+    }
+
+   IEnumerator CoolDown()
+    {
+        while (timer > 0)
+        {
+            timer -= 1;
+            yield return null;
+        }
+       
     }
 }
