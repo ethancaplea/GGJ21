@@ -114,6 +114,9 @@ MonoBehaviour:
   health: 10
   damage: 1
   target: {fileID: 0}
+  fruitFlag: 0
+  trapFlag: 0
+  timer: 5
 --- !u!195 &5535758856523822449
 NavMeshAgent:
   m_ObjectHideFlags: 0
