@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float speed = 5F;
     public float gravity = 20F;
     //stats
-    public float health = 50F;
+    //public float health = 50F;
     public float stamina = 5F;
    // public GameObject weapon;
     private float refillStam;
