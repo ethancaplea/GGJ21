@@ -61,13 +61,13 @@
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\ItemManagement.cs" />
     <Compile Include="Assets\Scripts\Fruit.cs" />
+    <Compile Include="Assets\Scripts\BasicEnemyBehavior.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnBehavior.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\PlayerWeapon.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\BasicEnemyBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
