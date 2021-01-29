@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class BasicEnemyBehavior : MonoBehaviour
 {
     Collider collider;  // the enemy's collider component
-    int health = 10;    // the health before the enemy dies
+    public int health = 10;    // the health before the enemy dies
+    public int damage = 1;     // the damage the enemy does in a single attack
     public GameObject target;   // what the enemy is moving towards
     Vector3 targetDirection;  // the direction towards the target
     NavMeshAgent agent;     // the navigation component
