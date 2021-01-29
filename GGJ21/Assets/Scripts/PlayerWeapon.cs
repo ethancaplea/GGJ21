@@ -9,14 +9,21 @@ public class PlayerWeapon : MonoBehaviour
     private ItemManagement items;
     public float damage;
     public float range;
+    public BoxCollider box;
     private GameObject enemy;
     private bool hit;
+    int currentWeapon;
+    private BoxCollider weaponStats;
+    private float nr;
     // Start is called before the first frame update
     void Start()
     {
-        hit = this.GetComponent<BoxCollider>().enabled;
+        hit = box.GetComponent<BoxCollider>().enabled;
         hit = false;
         weapon = items.items[0];
+        currentWeapon = 0;
+        weaponStats = box.GetComponent<BoxCollider>();
+        nr = weaponStats.size.x;
     }
 
     // Update is called once per frame
@@ -39,16 +46,29 @@ public class PlayerWeapon : MonoBehaviour
 
         //if check so the player can switch between available weapons
         //if nothing is in that slot it gets defaulted to fists
+        if (Input.GetButton("next"))
+        {
+            weapon = items.items[currentWeapon + 1]; 
+        }
+        else if (Input.GetButton("previous"))
+        {
+            weapon = items.items[currentWeapon - 1];
+        }
+        //if there is no next or previous weapon the next equal 0 and previous equals 3
+
+        //adjust the range and damage of the weapon hit box
+        nr = range;
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "enemy")
+        //deal damage to the enemy
+        if (collision.gameObject.tag == "enemy" && hit == true)
         {
             enemy = collision.gameObject;
+            enemy.gameObject.GetComponent<BasicEnemyBehavior>().health -= (int)damage;
         }
-        //deal damage to the enemy
 
     }
 }
