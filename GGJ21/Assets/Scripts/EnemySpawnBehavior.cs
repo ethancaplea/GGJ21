@@ -8,8 +8,6 @@ using UnityEngine;
 
 public class EnemySpawnBehavior : MonoBehaviour
 {
-    public GameObject player;   // the player
-
     public GameObject enemy;    // an enemy to spawn
 
     // spawn x coordinates
@@ -23,21 +21,15 @@ public class EnemySpawnBehavior : MonoBehaviour
     float zPos;
 
     int enemyCount = 0;  // number of enemies spawned
-    public int enemyCountMax = 5; // number of enemies to spawn
+    public int enemyCountMax; // number of enemies to spawn
 
     void Start()
     {
         //set spawn constraints
         xPos1 = gameObject.transform.position.x - 3;
         xPos2 = gameObject.transform.position.x + 3;
-        zPos1 = gameObject.transform.position.y - 3;
-        zPos2 = gameObject.transform.position.y + 3;
-    }
-
-    private void Update()
-    {
-        OnBecameVisible();
-        OnBecameInvisible();
+        zPos1 = gameObject.transform.position.z - 3;
+        zPos2 = gameObject.transform.position.z + 3;
     }
 
     IEnumerator EnemySpawn()
@@ -49,28 +41,18 @@ public class EnemySpawnBehavior : MonoBehaviour
             zPos = Random.Range(zPos1, zPos2 + 1);
 
             // instantiate enemies
-            Instantiate(enemy, new Vector3(xPos, 10, zPos), Quaternion.identity);
+            Instantiate(enemy, new Vector3(xPos, 1, zPos), Quaternion.identity);
 
             // how often to spawn enemies
             yield return new WaitForSeconds(10f);
 
             // increment enemy count
             enemyCount++;
-
         }
     }
 
-    // when the tile is seen by the camera
-    private void OnBecameVisible()
+    private void OnTriggerEnter(Collider player)
     {
-        // spawn enemies
         StartCoroutine(EnemySpawn());
-    }
-
-    // when the tile is not seen by the camera
-    private void OnBecameInvisible()
-    {
-        // dont spawn enemies
-        StopCoroutine(EnemySpawn());
     }
 }
