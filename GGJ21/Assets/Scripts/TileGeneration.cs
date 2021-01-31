@@ -7,8 +7,8 @@ public class TileGeneration : MonoBehaviour
     public int mapWidth;       // width of the whole map
     public int mapHeight;      // height of the whole map
     public GameObject[] tiles;  // available tile types
-    int tileWidth = 100;      // width of each tile
-    int tileHeight = 100;     // height of each tile
+    int tileWidth = 50;      // width of each tile
+    int tileHeight = 50;     // height of each tile
 
     private void Start()
     {

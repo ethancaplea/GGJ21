@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 5F;
-    public float gravity = 20F;
+    public float initialSpeed;
+    float speed;
+    public float gravity;
     //stats
-    //public float health = 50F;
-    public float stamina = 5F;
+    //public float health;
+    public float stamina;
    // public GameObject weapon;
     private float refillStam;
     private bool tired = false;
@@ -42,12 +43,12 @@ public class Player : MonoBehaviour
             
             if (Input.GetButton("Run") && stamina > 0 && tired == false && cooldown == false)
             {
-                speed = 10F;
+                speed = initialSpeed + 5;
                 stamina -= Time.deltaTime;
             }
             else
             {
-                speed = 5F;
+                speed = initialSpeed;
                 tired = true;
             }
 
