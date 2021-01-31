@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 723696836394273778}
   m_Layer: 0
   m_Name: basicEnemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   damage: 1
-  target: {fileID: 5734056568732970769, guid: b7597c6938ea806448290c530a776016, type: 3}
   fruitFlag: 0
   trapFlag: 0
   timer: 5
