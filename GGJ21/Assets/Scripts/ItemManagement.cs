@@ -15,6 +15,10 @@ public class ItemManagement : MonoBehaviour
     {
         return items.Find(item => item.id == id);
     }
+    public Item GetItem(string name)
+    {
+        return items.Find(item => item.title == name);
+    }
     void Management()
     {
         items = new List<Item>()

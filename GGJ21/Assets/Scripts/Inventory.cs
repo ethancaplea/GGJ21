@@ -12,4 +12,26 @@ public class Inventory : MonoBehaviour
         Item item = items.GetItem(id);
         Backpack.Add(item);
     }
+
+    public void AddItem(string name)
+    {
+        Item item = items.GetItem(name);
+        Backpack.Add(item);
+    }
+    public void removeItem(int id)
+    {
+        Item removeItem = Backpack.Find(item => item.id == id);
+        if (removeItem != null)
+        {
+            Backpack.Remove(removeItem);
+        }
+    }
+    public void removeItem(string name)
+    {
+        Item removeItem = Backpack.Find(item => item.title == name);
+        if (removeItem != null)
+        {
+            Backpack.Remove(removeItem);
+        }
+    }
 }
