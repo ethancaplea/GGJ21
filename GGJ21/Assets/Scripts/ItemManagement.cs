@@ -33,7 +33,10 @@ public class ItemManagement : MonoBehaviour
             new Item(2, "Boots", "Very fast", new Dictionary<string, float>
             {
                 {"Speed", 3 }
-            }, "Power up")
+            }, "Power up"),
+
+            new Item(3, "Tower Part", "N/A", new Dictionary<string, float>
+            {}, "Component"),
         };
 
         
