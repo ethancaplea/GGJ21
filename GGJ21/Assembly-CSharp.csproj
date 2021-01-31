@@ -71,6 +71,10 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\LightingCycle.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+>>>>>>> 1e8e11d5621267bc5a86c43516040ab2e2fc1d41
     <Compile Include="Assets\Scripts\PlayerWeapon.cs" />
     <Compile Include="Assets\Scripts\Fruit.cs" />
     <Compile Include="Assets\Scripts\BasicEnemyBehavior.cs" />
