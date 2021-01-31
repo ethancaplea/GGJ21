@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Jorge.unity
+=======
+- path: Assets/Scenes/Shed.unity
+>>>>>>> 16dbf082d20edfcb3e25ea9f7c383f2c045094d6
   isLoaded: 1
   isActive: 1
   isSubScene: 0
