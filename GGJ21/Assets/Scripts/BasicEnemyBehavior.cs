@@ -79,6 +79,9 @@ public class BasicEnemyBehavior : MonoBehaviour
 
         #region combat with player
 
+        // attack player
+
+
         // enemy is at 0 health so it is destroyed
         if (health == 0)
         {

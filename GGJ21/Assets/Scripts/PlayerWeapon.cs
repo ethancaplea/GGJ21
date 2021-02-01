@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerWeapon : MonoBehaviour
 {
     [NonSerialized] public Item weapon;
-    private ItemManagement items;
+    public ItemManagement items;
     public float damage;
     public float range;
     public BoxCollider box;
